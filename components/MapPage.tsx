@@ -5,9 +5,10 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { SourceCoordinateContext } from "@/context/SourceCoordinateContext";
 import { DestinationCoordinateContext } from "@/context/DestinationCoordinateContext";
 import MapRoute from "./MapRoute";
+import { RouteDataContext } from "@/context/RouteDataContext";
 const MapPage = () => {
   const screenHeight = window.innerHeight * 0.8;
-  const [route, setRoute] = useState<any>(null);
+  const { route, setRoute } = useContext<any>(RouteDataContext);
   const { sourceCoordinate, setSourceCoordinate } = useContext(
     SourceCoordinateContext
   );
@@ -44,7 +45,6 @@ const MapPage = () => {
     try {
       const res = await fetch(navigationAPI_URL);
       const result = await res.json();
-      console.log(result.routes[0]);
       setRoute(result.routes[0]);
     } catch (err) {
       console.log(err);

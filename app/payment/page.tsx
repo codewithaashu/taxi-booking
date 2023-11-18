@@ -1,24 +1,12 @@
-"use client";
-import CheckoutForm from "@/components/CheckoutForm";
-import { CarContext } from "@/context/CarContext";
-import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
-import { useContext } from "react";
-
+import { Metadata } from "next";
+import Layout from "./layout";
+export const metadata: Metadata = {
+  title: "Go Taxis | Payment",
+  description:
+    "A Taxi-Booking Website | Go Taxis | India No.1 Taxi Booking Website | Launch in Bhopal,Indore,Gwalior and Jabalpur.",
+};
 const page = () => {
-  const stripePromise: any = loadStripe(
-    process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-  );
-  const options = {
-    mode: "payment",
-    amount: 14000,
-    currency: "inr",
-  };
-  return (
-    <Elements stripe={stripePromise} options={options}>
-      <CheckoutForm />
-    </Elements>
-  );
+  return <Layout />;
 };
 
 export default page;
