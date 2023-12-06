@@ -6,6 +6,7 @@ function MapRoute(props: any) {
       data={{
         type: "Feature",
         geometry: { type: "LineString", coordinates: props.coordinates },
+        properties: null,
       }}
     >
       <Layer

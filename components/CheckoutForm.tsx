@@ -14,7 +14,6 @@ const CheckoutForm = () => {
   const elements = useElements();
 
   const { selectedCar } = useContext(CarContext);
-  console.log(selectedCar);
   const { route } = useContext<any>(RouteDataContext);
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -32,7 +31,6 @@ const CheckoutForm = () => {
     const amount = amt * 100;
     const { data } = await axios.post("/api/create-intent", { amount });
     const clientSecret = data;
-    console.log(clientSecret);
     const { error } = await stripe.confirmPayment({
       elements,
       clientSecret,

@@ -48,7 +48,6 @@ const MapPage = () => {
       const result = await res.json();
       setRoute(result.routes[0]);
     } catch (err) {
-      console.log(err);
       return err;
     }
   };
