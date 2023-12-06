@@ -25,12 +25,10 @@ const Hero = () => {
               key={index}
               onClick={() => setSelectedCar(currElem)}
             >
-              <Image
+              <img
                 src={currElem.imgSrc}
                 alt="Car"
-                width={80}
-                height={100}
-                className="w-full"
+                className="w-full h-[55px]"
               />
               <div className="flex justify-between mt-2 items-center">
                 <div className="text-xs text-gray-500 font-semibold">
@@ -51,11 +49,9 @@ const Hero = () => {
       <div className="grid grid-cols-5 md:grid-cols-5 w-full gap-3">
         {PaymentMethods.map((currElem, index) => {
           return (
-            <Image
+            <img
               src={currElem}
               alt="Payment Methods"
-              width={20}
-              height={20}
               className={`w-full h-full border-[1px] rounded-md border-gray-200 hover:scale-105 hover:border-[2px] cursor-pointer ${
                 selectedPaymentMethod === currElem
                   ? "border-[#bc00cc] border-[2px]"
