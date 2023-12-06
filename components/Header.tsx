@@ -16,9 +16,9 @@ const Header = () => {
             height={60}
             className="w-full"
           /> */}
-          <h1 className="text-xl font-bold">goTaxis</h1>
+          <h1 className="text-xl font-bold">Go-Taxis</h1>
         </div>
-        <div className="hidden md:grid md:grid-cols-3">
+        <div className="hidden  md:grid-cols-3">
           <h2 className="text-lg font-medium text-gray-500 col-span-1 cursor-pointer hover:text-gray-800 hover:scale-100">
             Home
           </h2>

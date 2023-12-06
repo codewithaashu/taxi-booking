@@ -35,7 +35,7 @@ const CheckoutForm = () => {
       elements,
       clientSecret,
       confirmParams: {
-        return_url: "http://localhost:3000",
+        return_url: "https://go-taxis.vercel.app/",
       },
     });
   };

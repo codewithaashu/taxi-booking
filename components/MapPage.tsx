@@ -53,7 +53,7 @@ const MapPage = () => {
   };
   return (
     <div className="w-full pr-3">
-      <div className="text-xl font-bold mb-1 px-2">Map</div>
+      <div className="text-xl font-medium mb-1 px-2">Map</div>
       <div
         className="w-full border-[1px] border-gray-300 rounded-md relative"
         style={{ minHeight: screenHeight }}

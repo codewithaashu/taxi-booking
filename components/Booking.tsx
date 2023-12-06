@@ -21,7 +21,7 @@ const Booking = () => {
   };
   return (
     <div className="px-6 " onClick={() => setAddressList(null)}>
-      <div className="text-xl font-bold mb-1">Booking</div>
+      <div className="text-xl font-medium mb-1">Booking</div>
       <div className="px-5 py-3 border-[1px]  w-full border-gray-100 bg-white rounded-md shadow-md">
         <NavigationBox
           addressList={addressList}

@@ -37,7 +37,7 @@ const Hero = () => {
                 <div className="text-xs font-normal text-black">
                   <span>&#8377; </span>
                   {route
-                    ? ((route.distance / 1000) * currElem.priceRate).toFixed(2)
+                    ? Math.round((route.distance / 1000) * currElem.priceRate)
                     : currElem.priceRate}
                 </div>
               </div>
@@ -54,7 +54,7 @@ const Hero = () => {
               alt="Payment Methods"
               className={`w-full h-full border-[1px] rounded-md border-gray-200 hover:scale-105 hover:border-[2px] cursor-pointer ${
                 selectedPaymentMethod === currElem
-                  ? "border-[#bc00cc] border-[2px]"
+                  ? "border-[purple] border-[2px]"
                   : ""
               }`}
               key={index}
