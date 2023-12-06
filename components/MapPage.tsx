@@ -7,7 +7,7 @@ import { DestinationCoordinateContext } from "@/context/DestinationCoordinateCon
 import MapRoute from "./MapRoute";
 import { RouteDataContext } from "@/context/RouteDataContext";
 const MapPage = () => {
-  const screenHeight = window.innerHeight * 0.8;
+  const [screenHeight, setScreeenHeight] = useState<any>(null);
   const { route, setRoute } = useContext<any>(RouteDataContext);
   const { sourceCoordinate, setSourceCoordinate } = useContext(
     SourceCoordinateContext
@@ -22,6 +22,7 @@ const MapPage = () => {
       center: [sourceCoordinate.longitude, sourceCoordinate.latitude],
       duration: 1500,
     });
+    setScreeenHeight(window.innerHeight * 0.8);
   }, [sourceCoordinate]);
 
   /* Use to fly Destination Marker */
@@ -92,7 +93,7 @@ const MapPage = () => {
           </Map>
         )}
         {route && (
-          <div className="flex flex-wrap gap-5 p-2 w-fit rounded-sm bg-yellow-400 absolute bottom-0 right-0 z-10">
+          <div className="flex flex-wrap gap-5 p-2 w-fit rounded-sm bg-yellow-500 absolute bottom-0 right-0 z-10 text-black">
             <div className="text-sm font-semibold">
               Distance:{" "}
               <span className="text-xs font-medium">

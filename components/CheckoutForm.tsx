@@ -10,7 +10,7 @@ import axios from "axios";
 import { useContext } from "react";
 
 const CheckoutForm = () => {
-  const stripe = useStripe();
+  const stripe: any = useStripe();
   const elements = useElements();
 
   const { selectedCar } = useContext(CarContext);
@@ -52,7 +52,7 @@ const CheckoutForm = () => {
           <button
             type="submit"
             disabled={!stripe || !elements}
-            className="w-full bg-yellow-500 mt-5 p-2 text-base font-medium "
+            className="w-full bg-[#b01aa7] text-white mt-5 p-2 text-base font-medium "
           >
             Pay
           </button>

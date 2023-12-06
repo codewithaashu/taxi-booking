@@ -19,7 +19,7 @@ const Hero = () => {
             <div
               className={`py-2 px-3 border-[1px] rounded-md cursor-pointer hover:scale-100 hover:border-[2px] w-full min-w-fit min-h-fit ${
                 selectedCar?.type === currElem.type
-                  ? "border-yellow-400 border-[2px]"
+                  ? "border-[#b01aa7] border-[2px]"
                   : ""
               }`}
               key={index}
@@ -36,7 +36,7 @@ const Hero = () => {
                 <div className="text-xs text-gray-500 font-semibold">
                   {currElem.type}
                 </div>
-                <div className="text-xs font-normal">
+                <div className="text-xs font-normal text-black">
                   <span>&#8377; </span>
                   {route
                     ? ((route.distance / 1000) * currElem.priceRate).toFixed(2)
@@ -58,7 +58,7 @@ const Hero = () => {
               height={20}
               className={`w-full h-full border-[1px] rounded-md border-gray-200 hover:scale-105 hover:border-[2px] cursor-pointer ${
                 selectedPaymentMethod === currElem
-                  ? "border-yellow-400 border-[2px]"
+                  ? "border-[#bc00cc] border-[2px]"
                   : ""
               }`}
               key={index}

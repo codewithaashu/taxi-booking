@@ -22,14 +22,14 @@ const Booking = () => {
   return (
     <div className="px-6 " onClick={() => setAddressList(null)}>
       <div className="text-xl font-bold mb-1">Booking</div>
-      <div className="px-5 border-[1px] rounded-sm w-full border-gray-100">
+      <div className="px-5 py-3 border-[1px]  w-full border-gray-100 bg-white rounded-md shadow-md">
         <NavigationBox
           addressList={addressList}
           setAddressList={setAddressList}
         />
         <Hero />
         <button
-          className="w-full p-1 mt-4 text-black text-base font-semibold bg-yellow-400 rounded-md"
+          className="w-full p-1 mt-4 text-white text-base font-semibold bg-[#b01aa7] rounded-md"
           onClick={handleBtnClick}
           disabled={
             !source || !destination || !selectedCar || !selectedPaymentMethod

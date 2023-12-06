@@ -89,13 +89,13 @@ const NavigationBox = (props: any) => {
   };
   return (
     <>
-      <div className="py-3 relative">
+      <div className="py-3 relative ">
         <div className="text-sm text-gray-400 font-medium mb-1">
           Where From?
         </div>
         <input
           type="text"
-          className="border-gray-300 rounded-md border-[1px] outline-none w-full px-2 py-1 text-md"
+          className="border-gray-300 rounded-md border-[1px] outline-none w-full px-2 py-1 text-md text-black"
           value={source}
           name="source"
           onChange={handleChange}
@@ -109,7 +109,9 @@ const NavigationBox = (props: any) => {
                   onClick={() => handleDropdownSelect(currElem)}
                   key={index}
                 >
-                  <div className="text-sm font-semibold">{currElem?.name}</div>
+                  <div className="text-sm font-semibold text-black">
+                    {currElem?.name}
+                  </div>
                   <div className="text-xs font-medium text-gray-500">
                     {currElem?.place_formatted ??
                       currElem?.address + "," + currElem?.full_address}
@@ -123,7 +125,7 @@ const NavigationBox = (props: any) => {
         <div className="text-sm text-gray-400 font-medium mb-1">Where To?</div>
         <input
           type="text"
-          className="border-gray-300 rounded-md border-[1px] outline-none w-full px-2 py-1 text-md"
+          className="border-gray-300 rounded-md border-[1px] outline-none w-full px-2 py-1 text-md text-black"
           value={destination}
           name="destination"
           onChange={handleChange}
@@ -137,7 +139,9 @@ const NavigationBox = (props: any) => {
                   onClick={() => handleDropdownSelect(currElem)}
                   key={index}
                 >
-                  <div className="text-sm font-semibold">{currElem?.name}</div>
+                  <div className="text-sm font-semibold text-black">
+                    {currElem?.name}
+                  </div>
                   <div className="text-xs font-medium text-gray-500">
                     {currElem?.place_formatted ??
                       currElem?.address + "," + currElem?.full_address}
